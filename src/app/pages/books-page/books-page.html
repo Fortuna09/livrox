@@ -1,0 +1,12 @@
+<div class="books-page">
+  <div class="books-header">
+    <h1>Livros</h1>
+    <button> + Adicionar Livro</button>
+  </div>
+  <div class="books-container">
+    <app-book-card 
+      *ngFor="let book of books" 
+      [book]="book">
+    </app-book-card>
+  </div>
+</div>

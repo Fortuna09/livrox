@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "coverImageUrl": "assets/books/gatsby.jpg",
+    "year": 1925,
+    "genre": "Classic"
+  },
+  {
+    "id": 2,
+    "title": "1984",
+    "author": "George Orwell",
+    "coverImageUrl": "assets/books/1984.jpg",
+    "year": 1949,
+    "genre": "Dystopian"
+  },
+  {
+    "id": 3,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "coverImageUrl": "assets/books/mockingbird.jpg",
+    "year": 1960,
+    "genre": "Classic"
+  },
+  {
+    "id": 4,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "coverImageUrl": "assets/books/pride.jpg",
+    "year": 1813,
+    "genre": "Romance"
+  },
+  {
+    "id": 5,
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "coverImageUrl": "assets/books/catcher.jpg",
+    "year": 1951,
+    "genre": "Classic"
+  },
+  {
+    "id": 6,
+    "title": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "coverImageUrl": "assets/books/harry.jpg",
+    "year": 1997,
+    "genre": "Fantasy"
+  },
+  {
+    "id": 7,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "coverImageUrl": "assets/books/hobbit.jpg",
+    "year": 1937,
+    "genre": "Fantasy"
+  },
+  {
+    "id": 8,
+    "title": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "coverImageUrl": "assets/books/lotr.jpg",
+    "year": 1954,
+    "genre": "Fantasy"
+  }
+]

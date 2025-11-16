@@ -1,21 +1,25 @@
-import { NgModule, provideBrowserGlobalErrorListeners, provideZonelessChangeDetection } from '@angular/core';
-import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { ComponentsModule } from './components/components-module';
+import { BookCard } from './components/book-card/book-card';
+import { AppRoutingModule } from './routes/app-routing-module';
+import { PagesModule } from './pages/pages-module';
 
 @NgModule({
   declarations: [
-    App
+    App  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    ComponentsModule,
+    AppRoutingModule,
+    PagesModule
   ],
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection(),
-    provideClientHydration(withEventReplay())
+    provideHttpClient(withInterceptorsFromDi())
   ],
   bootstrap: [App]
 })
