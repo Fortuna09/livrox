@@ -7,6 +7,8 @@ import { BookCard } from './book-card/book-card';
 import { ReadingStatsComponent } from './reading-stats/reading-stats';
 import { NotStartedCardComponent } from './not-started-card/not-started-card';
 import { ReadingCalendarComponent } from './reading-calendar/reading-calendar';
+import { BookMedalsComponent } from './book-medals/book-medals';
+import { AchievementsComponent } from './achievements/achievements';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ReadingCalendarComponent } from './reading-calendar/reading-calendar';
     BookCard,
     ReadingStatsComponent,
     NotStartedCardComponent,
-    ReadingCalendarComponent
+    ReadingCalendarComponent,
+    BookMedalsComponent,
+    AchievementsComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +30,9 @@ import { ReadingCalendarComponent } from './reading-calendar/reading-calendar';
     BookCard,
     ReadingStatsComponent,
     NotStartedCardComponent,
-    ReadingCalendarComponent
+    ReadingCalendarComponent,
+    BookMedalsComponent,
+    AchievementsComponent
   ]
 })
 export class ComponentsModule { }

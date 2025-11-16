@@ -1,16 +1,24 @@
-<div class="book-details" *ngIf="book">
+<div class="book-details" *ngIf="book" [class.galaxy-background]="hasTrophy">
   <div class="header">
     <button class="back-button" routerLink="/meus-livros">← Voltar</button>
   </div>
 
   <div class="content">
-    <div class="book-info">
+    <div class="book-info" [class.trophy-earned]="hasTrophy">
       <img [src]="book.coverImageUrl" [alt]="book.title" class="book-cover">
       <div class="info">
         <h1>{{ book.title }}</h1>
         <p class="author">por {{ book.author }}</p>
         <p class="year" *ngIf="book.year">Ano: {{ book.year }}</p>
         <p class="genre" *ngIf="book.genre">Gênero: {{ book.genre }}</p>
+        
+        <!-- Medalhas conquistadas -->
+        <app-book-medals
+          *ngIf="hasStartedReading() && (medals.length > 0 || hasTrophy)"
+          [medals]="medals"
+          [currentProgress]="getProgress()"
+          [hasTrophy]="hasTrophy">
+        </app-book-medals>
       </div>
     </div>
 
@@ -21,7 +29,7 @@
       <app-not-started-card 
         *ngIf="!hasStartedReading()"
         (startReading)="startReading()">
-      </app-not-started-card>
+      </app-not-started-card>      
 
       <!-- Calendário e ações -->
       <app-reading-calendar
@@ -40,6 +48,12 @@
         [progress]="getProgress()"
         [isCompleted]="book.isCompleted || false">
       </app-reading-stats>
+
+      <!-- Painel de Conquistas -->
+      <app-achievements
+        *ngIf="hasStartedReading() && achievements.length > 0"
+        [achievements]="achievements">
+      </app-achievements>
 
       <!-- Ação de cancelar leitura -->
       <div class="cancel-reading-section" *ngIf="hasStartedReading()">

@@ -1,0 +1,19 @@
+<div class="book-medals">
+  <!-- Troféu Completo -->
+  <div *ngIf="hasTrophy" class="trophy-display">
+    <div class="trophy-badge">
+      <img src="/assets/icons/trofeus/platinum.png" alt="Troféu Platinum" class="trophy-icon">
+      <span class="trophy-label">Troféu Conquistado!</span>
+    </div>
+  </div>
+
+  <!-- Medalhas individuais (apenas se não tiver troféu) -->
+  <div *ngIf="!hasTrophy" class="medals-container">
+    <div 
+      *ngFor="let medalType of getMedalsList()" 
+      class="medal-item"
+      [title]="getMedalConfig(medalType).name">
+      <span class="medal-icon">{{ getMedalConfig(medalType).icon }}</span>
+    </div>
+  </div>
+</div>

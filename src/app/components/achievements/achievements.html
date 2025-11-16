@@ -1,0 +1,33 @@
+<div class="achievements-panel">
+  <div class="achievements-header">
+    <h3>🏆 Missões</h3>
+    <span class="achievements-count">{{ getCompletedCount() }} / {{ getTotalCount() }}</span>
+  </div>
+
+  <div class="achievements-list">
+    <div 
+      *ngFor="let achievement of achievements" 
+      class="achievement-item"
+      [class.completed]="achievement.completed">
+      
+      <div class="achievement-icon">
+        <span>{{ getAchievementIcon(achievement) }}</span>
+      </div>
+
+      <div class="achievement-info">
+        <h4 class="achievement-name">
+          {{ achievement.name }}
+          <span *ngIf="achievement.medal" class="medal-badge">
+            {{ achievement.medal === 'platinum' ? '🏆' : '💎' }}
+          </span>
+        </h4>
+        <p class="achievement-description">{{ achievement.description }}</p>
+      </div>
+
+      <div class="achievement-status">
+        <span *ngIf="achievement.completed" class="status-icon completed">✓</span>
+        <span *ngIf="!achievement.completed" class="status-icon pending">○</span>
+      </div>
+    </div>
+  </div>
+</div>
