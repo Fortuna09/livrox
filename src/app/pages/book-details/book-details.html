@@ -1,1 +1,56 @@
-<p>book-details works!</p>
+<div class="book-details" *ngIf="book">
+  <div class="header">
+    <button class="back-button" routerLink="/meus-livros">← Voltar</button>
+  </div>
+
+  <div class="content">
+    <div class="book-info">
+      <img [src]="book.coverImageUrl" [alt]="book.title" class="book-cover">
+      <div class="info">
+        <h1>{{ book.title }}</h1>
+        <p class="author">por {{ book.author }}</p>
+        <p class="year" *ngIf="book.year">Ano: {{ book.year }}</p>
+        <p class="genre" *ngIf="book.genre">Gênero: {{ book.genre }}</p>
+      </div>
+    </div>
+
+    <div class="statistics">
+      <h2>Estatísticas de Leitura</h2>
+      
+      <!-- Estado: Não Iniciado -->
+      <app-not-started-card 
+        *ngIf="!hasStartedReading()"
+        (startReading)="startReading()">
+      </app-not-started-card>
+
+      <!-- Calendário e ações -->
+      <app-reading-calendar
+        *ngIf="hasStartedReading()"
+        [calendarDays]="calendarDays"
+        [startDateFormatted]="formatDate(book.startReadingDate!)"
+        [maxDate]="getTodayDate()"
+        (addActivity)="onManualActivityAdded($event)">
+      </app-reading-calendar>
+
+      <!-- Grid de estatísticas -->
+      <app-reading-stats
+        *ngIf="hasStartedReading()"
+        [pagesRead]="book.pagesRead || 0"
+        [totalPages]="book.totalPages || 0"
+        [progress]="getProgress()"
+        [isCompleted]="book.isCompleted || false">
+      </app-reading-stats>
+
+      <!-- Ação de cancelar leitura -->
+      <div class="cancel-reading-section" *ngIf="hasStartedReading()">
+        <button class="btn-cancel-reading" (click)="cancelReading()">
+          🚫 Cancelar Leitura
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loading" *ngIf="!book">
+  <p>Carregando...</p>
+</div>

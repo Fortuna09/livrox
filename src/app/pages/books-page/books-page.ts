@@ -14,7 +14,7 @@ export class BooksPage implements OnInit {
 
   constructor(private bookService: BookService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
     this.bookService.getBooks().subscribe({
       next: (data) => {
         this.books = data;

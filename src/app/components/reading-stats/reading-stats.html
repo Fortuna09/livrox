@@ -1,0 +1,26 @@
+<div class="stats-grid">
+  <div class="stat-card">
+    <h3>Páginas Lidas</h3>
+    <p class="stat-value">{{ pagesRead || 0 }}</p>
+    <p class="stat-subtitle">de {{ totalPages || 0 }} páginas</p>
+  </div>
+
+  <div class="stat-card">
+    <h3>Progresso</h3>
+    <p class="stat-value">{{ progress }}%</p>
+    <div class="progress-bar">
+      <div class="progress-fill" [style.width.%]="progress"></div>
+    </div>
+  </div>
+
+  <div class="stat-card">
+    <h3>Tempo de Leitura</h3>
+    <p class="stat-value">0h</p>
+    <p class="stat-subtitle">estimado</p>
+  </div>
+
+  <div class="stat-card" [class.completed]="isCompleted">
+    <h3>Status</h3>
+    <p class="stat-value">{{ statusText }}</p>
+  </div>
+</div>

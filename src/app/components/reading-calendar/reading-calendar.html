@@ -1,0 +1,50 @@
+<div class="active-action-pages">
+  <div class="header-section">
+    <h3>Progresso de Leitura</h3>
+    <button class="btn-add-manual" (click)="onToggleForm()">
+      {{ showForm ? '❌ Cancelar' : '📅 Adicionar Leitura' }}
+    </button>
+  </div>
+
+  <div class="manual-form" *ngIf="showForm">
+    <div class="form-group">
+      <label>Data da leitura:</label>
+      <input type="date" [(ngModel)]="selectedDate" [max]="maxDate">
+    </div>
+    <div class="form-group">
+      <label>Páginas lidas:</label>
+      <input type="number" [(ngModel)]="manualPages" min="1" placeholder="Ex: 25">
+    </div>
+    <button 
+      class="btn-save" 
+      (click)="onSaveActivity()" 
+      [disabled]="!selectedDate || manualPages <= 0">
+      ✔ Salvar Registro
+    </button>
+  </div>
+
+  <div class="github-calendar" *ngIf="calendarDays.length > 0">
+    <div class="calendar-label">Atividade desde {{ startDateFormatted }}</div>
+    <div class="calendar-grid">
+      <div 
+        *ngFor="let day of calendarDays" 
+        class="calendar-day"
+        [ngClass]="'intensity-' + day.intensity"
+        [title]="getTooltip(day)">
+      </div>
+    </div>
+    <div class="calendar-legend">
+      <span>Menos</span>
+      <div class="legend-box intensity-0"></div>
+      <div class="legend-box intensity-1"></div>
+      <div class="legend-box intensity-2"></div>
+      <div class="legend-box intensity-3"></div>
+      <div class="legend-box intensity-4"></div>
+      <span>Mais</span>
+    </div>
+  </div>
+
+  <div class="empty-calendar" *ngIf="calendarDays.length === 0">
+    <p>📅 O calendário aparecerá conforme você registra suas leituras.</p>
+  </div>
+</div>

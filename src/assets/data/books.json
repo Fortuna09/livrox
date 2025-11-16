@@ -5,7 +5,12 @@
     "author": "F. Scott Fitzgerald",
     "coverImageUrl": "assets/books/gatsby.jpg",
     "year": 1925,
-    "genre": "Classic"
+    "genre": "Classic",
+    "totalPages": 180,
+    "pagesRead": 0,
+    "isCompleted": false,
+    "readingStatus": "not-started",
+    "readingHistory": []
   },
   {
     "id": 2,
@@ -13,7 +18,12 @@
     "author": "George Orwell",
     "coverImageUrl": "assets/books/1984.jpg",
     "year": 1949,
-    "genre": "Dystopian"
+    "genre": "Dystopian",
+    "totalPages": 328,
+    "pagesRead": 0,
+    "isCompleted": false,
+    "readingStatus": "not-started",
+    "readingHistory": []
   },
   {
     "id": 3,
@@ -21,7 +31,12 @@
     "author": "Harper Lee",
     "coverImageUrl": "assets/books/mockingbird.jpg",
     "year": 1960,
-    "genre": "Classic"
+    "genre": "Classic",
+    "totalPages": 324,
+    "pagesRead": 0,
+    "isCompleted": false,
+    "readingStatus": "not-started",
+    "readingHistory": []
   },
   {
     "id": 4,
@@ -29,7 +44,12 @@
     "author": "Jane Austen",
     "coverImageUrl": "assets/books/pride.jpg",
     "year": 1813,
-    "genre": "Romance"
+    "genre": "Romance",
+    "totalPages": 432,
+    "pagesRead": 0,
+    "isCompleted": false,
+    "readingStatus": "not-started",
+    "readingHistory": []
   },
   {
     "id": 5,
@@ -37,7 +57,12 @@
     "author": "J.D. Salinger",
     "coverImageUrl": "assets/books/catcher.jpg",
     "year": 1951,
-    "genre": "Classic"
+    "genre": "Classic",
+    "totalPages": 234,
+    "pagesRead": 0,
+    "isCompleted": false,
+    "readingStatus": "not-started",
+    "readingHistory": []
   },
   {
     "id": 6,
@@ -45,7 +70,12 @@
     "author": "J.K. Rowling",
     "coverImageUrl": "assets/books/harry.jpg",
     "year": 1997,
-    "genre": "Fantasy"
+    "genre": "Fantasy",
+    "totalPages": 223,
+    "pagesRead": 0,
+    "isCompleted": false,
+    "readingStatus": "not-started",
+    "readingHistory": []
   },
   {
     "id": 7,
@@ -53,7 +83,12 @@
     "author": "J.R.R. Tolkien",
     "coverImageUrl": "assets/books/hobbit.jpg",
     "year": 1937,
-    "genre": "Fantasy"
+    "genre": "Fantasy",
+    "totalPages": 310,
+    "pagesRead": 0,
+    "isCompleted": false,
+    "readingStatus": "not-started",
+    "readingHistory": []
   },
   {
     "id": 8,
@@ -61,6 +96,11 @@
     "author": "J.R.R. Tolkien",
     "coverImageUrl": "assets/books/lotr.jpg",
     "year": 1954,
-    "genre": "Fantasy"
+    "genre": "Fantasy",
+    "totalPages": 1178,
+    "pagesRead": 0,
+    "isCompleted": false,
+    "readingStatus": "not-started",
+    "readingHistory": []
   }
 ]
