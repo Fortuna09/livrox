@@ -2,16 +2,55 @@
     width: 22rem;
     height: 30rem;
     margin: 1rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
     overflow: hidden;
-    background-color: #ff0000;
+    background: linear-gradient(to bottom, #fdfbf7 0%, #f8f4ed 100%);
+    border: 2px solid #e6dcc9;
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    font-family: 'Georgia', serif;
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        border-color: #d4c4a8;
+    }
+
+    &:active {
+        transform: translateY(-4px) scale(0.98);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
 
     .card-body{
-        padding: 2rem;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+        width: 100%;
+    }
+
+    .info-book-card{
+        text-align: center;
+        
+        .card-title {
+            color: #3d3229;
+            font-weight: 500;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Georgia', serif;
+        }
+        
+        .card-text {
+            color: #6b5d52;
+            font-size: 0.95rem;
+            font-style: italic;
+        }
     }
 
     .card-img-top{
@@ -19,5 +58,46 @@
         width: 70%;
         height: 50%;
         object-fit: cover;
+    }
+
+    .status-badge {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-align: center;
+        margin-top: auto;
+        transition: all 0.3s ease;
+
+        .status-text {
+            flex: 1;
+        }
+
+        .check-icon {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        &.status-not-started {
+            background-color: #d4c4a8;
+            color: #5a4a3a;
+            border: 2px solid #b8a890;
+        }
+
+        &.status-reading {
+            background-color: #b8a890;
+            color: #3d3229;
+            border: 2px solid #9e8970;
+        }
+
+        &.status-completed {
+            background-color: #a8b89e;
+            color: #2d3d29;
+            border: 2px solid #8a9e80;
+        }
     }
 }

@@ -22,8 +22,8 @@
       animation: trophyPulse 2s ease-in-out infinite;
 
       .trophy-icon {
-        width: 100px;
-        height: 100px;
+        width: 180px;
+        height: 180px;
         object-fit: contain;
         position: relative;
         filter: 
@@ -35,7 +35,7 @@
       }
 
       .trophy-label {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         font-weight: 700;
         color: #1b5e20;
         text-shadow: 1px 1px 2px rgba(200, 230, 201, 0.8);

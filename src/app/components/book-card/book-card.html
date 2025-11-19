@@ -1,7 +1,14 @@
 <div class="book-card" [routerLink]="['/livro', book.id]">
     <img [src]="book.coverImageUrl" alt="{{ book.title }} cover" class="card-img-top">
     <div class="card-body">
-        <h3 class="card-title">{{ book.title }}</h3>
-        <p class="card-text">by {{ book.author }}</p>
+        <div class="info-book-card">
+            <h3 class="card-title">{{ book.title }}</h3>
+            <p class="card-text">Por: {{ book.author }}</p>
+        </div>
+        
+        <div class="status-badge" [ngClass]="'status-' + (book.readingStatus || 'not-started')">
+            <span class="status-text">{{ book.readingStatus | readingStatus }}</span>
+            <span class="check-icon" *ngIf="book.readingStatus === 'completed'">✓</span>
+        </div>
     </div>
 </div>

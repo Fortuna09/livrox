@@ -5,7 +5,7 @@ import { Book } from '../../models/book.model';
   selector: 'app-book-card',
   standalone: false,
   templateUrl: './book-card.html',
-  styleUrl: './book-card.scss',
+  styleUrl: './book-card.scss'
 })
 export class BookCard {
 

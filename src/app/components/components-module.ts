@@ -9,6 +9,7 @@ import { NotStartedCardComponent } from './not-started-card/not-started-card';
 import { ReadingCalendarComponent } from './reading-calendar/reading-calendar';
 import { BookMedalsComponent } from './book-medals/book-medals';
 import { AchievementsComponent } from './achievements/achievements';
+import { ReadingStatusPipe } from '../pipes/reading-status.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AchievementsComponent } from './achievements/achievements';
     NotStartedCardComponent,
     ReadingCalendarComponent,
     BookMedalsComponent,
-    AchievementsComponent
+    AchievementsComponent,
+    ReadingStatusPipe
   ],
   imports: [
     CommonModule,
@@ -32,7 +34,8 @@ import { AchievementsComponent } from './achievements/achievements';
     NotStartedCardComponent,
     ReadingCalendarComponent,
     BookMedalsComponent,
-    AchievementsComponent
+    AchievementsComponent,
+    ReadingStatusPipe
   ]
 })
 export class ComponentsModule { }
